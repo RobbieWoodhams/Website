@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body> 
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div id="root">
+                <div class="Website_Header_Wrapper"></div>
+                <div class="Website_Body_Wrapper">
+
+                    <div class="Choose_Token_Overlay" id="Overlay_ID"></div>
+
+                    <div class="Choose_Token_Overlay_Menu" id="Overlay_Menu_ID">
+
+                        <h1 class="Overlay_Title" id="Overlay_Title_ID">Select Token</h1>
+
+                        <div class="Bitcoin_Token" id="Bitcoin_Token_ID">
+                            <p class="Token_Name">Bitcoin</p>
+                            <p class="Token_Letters">$BTC</p>
+                        </div>
+
+                        <div class="Ethereum_Token" id="Ethereum_Token_ID">
+                            <p class="Token_Name">Ethereum</p>
+                            <p class="Token_Letters">$ETH</p>
+                        </div>
+
+                        <div class="Coynbayse_Token" id="Coynbayse_Token_ID">
+                            <p class="Token_Name">Coynbayse</p>
+                            <p class="Token_Letters">$BAYSE</p>
+                        </div>
+
+                        <div class="Solana_Token" id="Solana_Token_ID">
+                            <p class="Token_Name">Solana</p>
+                            <p class="Token_Letters">$SOL</p>
+                        </div>
+
+                    </div>
+
+                   <div class="Container_Wrapper">
+                        <main class="Swap_Wrapper">
+
+                            <div class="Components_Header_Buttons">
+                                <button class="Components_Header_Swap" id="Swap_Button_ID">Swap</button>
+                                <button class="Components_Header_Buy" id="Buy_Button_ID">Buy</button>
+                                <button class="Components_Header_Sell" id="Sell_Button_ID">Sell</button>
+                                <button class="Components_Header_Send" id="Send_Button_ID">Send</button>
+                            </div>
+
+                            <div class="Components_Body_Pay">
+                                <div class="Currency_Input">
+                                    <h1 class="Currency_Title">You Pay</h1>
+                                    
+                                    <input type="number" id="Currency_Input_ID" name="currencyInput" placeholder="0" class="Currency_Input_Holder">
+                                    
+                                    <h1 class="Currency_USD" id="Currency_USD_ID_1">$0.00</h1>
+
+                                    <div class="Choose_Token_1" id="Token_1_ID">
+
+                                        <p class="Token_1_Title">Select Token</p>
+                                        
+                                        <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Components_Body_Swap" id="Swap_Tokens_Button">
+                                <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M13.98 22l-7.98 8 7.98 8v-6h14.02v-4h-14.02v-6zm28.02-4l-7.98-8v6h-14.02v4h14.02v6l7.98-8z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                            </div>
+
+                            <div class="Components_Body_Receive">
+                                <div class="Currency_Output">
+                                    <h1 class="Currency_Title">You Receive</h1>
+                                    
+                                    <input type="number" id="Currency_Output_ID" name="currencyOutput" placeholder="0" class="Currency_Output_Holder">
+                                    
+                                    <h1 class="Currency_USD" id="Currency_USD_ID_2">$0.00</h1>
+
+                                    <div class="Choose_Token_2" id="Token_2_ID">
+                                        
+                                        <p class="Token_2_Title">Select Token</p>
+                                        
+                                        <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+
+                        </main>
+                   </div>
+                </div>
+            </div>
+    </body>
+</html>

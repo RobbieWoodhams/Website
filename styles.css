@@ -1,176 +1,153 @@
-body{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
     background-color: #2A3B98;
-    height: 100vh; 
-    display: flex;
+}
+
+.Website_Header_Wrapper{
+    background-color: #0e184f;
+    padding: 20px;
+    width: 100%; 
+    height: 20%;
+}
+
+.Website_Body_Wrapper{
+    padding: 20px;
+    width: 100%; 
+    height: 80%;
+    display: flex; 
     justify-content: center; 
     align-items: center;
 }
 
-.container {
-    position: relative;
-    width: 600px;
-    height: 540px;
-    border: 2px solid #2A3B98;
-    border-radius: 20px;
+.Swap_Wrapper{
+    position: relative; 
+    top: 100px;
 }
 
-.youPay, .youReceive, .button {
-    position: absolute;
-    width: calc(100% - 10px); /* Adjust width for the border */
-    border: 5px solid transparent; /* 5px border */
-    box-sizing: border-box;
+.Container_Wrapper{
+    padding: 5px;
+    width: 600px; 
+    height: 800px;
+    margin: auto;
 }
 
-.components {
-    position: absolute;
-    box-sizing: border-box;
-    top: 0;
-    height: 50px;
-    display: flex;
-    align-items: center;
+.Components_Header_Buttons{
+    width: 100%; 
+    height: 60px;
 }
 
-.buy:hover, .sell:hover, .convert:hover, .send:hover {
-    background-color: #5261b3;
-}
-
-.componentsText {
+.Components_Header_Swap, .Components_Header_Buy, .Components_Header_Sell, .Components_Header_Send{
+    background-color: #2A3B98;
+    width: 130px; 
+    height: 100%;
+    border-radius: 50px;
     color: #fff;
     font-size: 24px; 
     transition: color 0.3s ease; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.buy, .sell, .convert, .send {
-    height: 100%;
-    width: 100px;
-    background-color: transparent; 
-    border-radius: 30px;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    transition: background-color 0.2s ease; 
+    border: none;
 }
 
+.Components_Header_Swap:hover, .Components_Header_Buy:hover, .Components_Header_Sell:hover, .Components_Header_Send:hover{
+    background-color: #5261b3;
+}
 
-.youPay {
-    top: 55px; 
+.Components_Body_Pay, .Components_Body_Receive{
+    margin-top: 5px;
+    background-color: #5261b3;
+    width: 100%;
     height: 200px;
-    border-radius: 20px;
-    background-color: #5261b3;
     cursor: pointer;
-    transition: 0.1s ease;
-    display: flex;
+    border-radius: 20px;
+    position: relative;
 }
 
-.youPay input {
-    top: 55px; 
-    height: 100%px;
-    border-radius: 20px;
-    background-color: #5261b3;
-    cursor: pointer;
-    transition: 0.1s ease;
-    display: flex;
-}
-
-.youPay:hover {
+.Components_Body_Pay:hover, .Components_Body_Receive:hover{
     border: 3px solid #0e184f;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
 }
 
-.swap {
+.Components_Body_Swap{
     position: absolute;
-    top: calc(50% - 37px);
-    left: calc(50% - 30px); 
     width: 50px; 
     height: 50px; 
     background-color: #5261b3;
     border-radius: 15px;
-    box-sizing: border-box;
-    border: 5px solid #2A3B98;
     z-index: 1;
+    border: 5px solid #2A3B98;
     cursor: pointer;
-    transition: 0.1s ease;
+    left: calc(50% - 25px);
+    top: 242px;
 }
 
-.swap:hover {
+.Components_Body_Swap:hover{
     border: 5px solid #2A3B98;
     background-color: #0e184f;
-    transition: 0.1s ease;
-}
-
-.youReceive {
-    top: 260px; 
-    height: 200px;
-    border-radius: 20px;
-    background-color: #5261b3;
-    cursor: pointer;
-    transition: 0.1s ease;
-    display: flex;
-}
-
-.youReceive input {
-    top: 55px; 
-    height: 100%px;
-    border-radius: 20px;
-    background-color: #5261b3;
-    cursor: pointer;
-    transition: 0.1s ease;
-    display: flex;
-
-}
-
-.youReceive:hover {
-    border: 3px solid #0e184f;
     transition: 0.2s ease;
 }
 
-.button {
-    top: 465;
+.Components_Body_Swap svg {
+    transform: rotate(90deg); 
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 80%;
+    width: 80%;
+    fill: white;
+}
+
+.Components_Body_Button{
+    margin-top: 5px;
+    width: 100%;
     height: 75px;
+    border: none;
     border-radius: 20px;
     background-color: #0e184f;
     cursor: pointer;
     transition: 0.3s ease;
-}
-
-.button:hover {
-    background-color: #1e254a;
-    transition: 0.1s ease;
-}
-
-.buttonText{
     text-align: center; 
     font-size: 24px;
     color: white; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    top: -6px;
-    left: 160px;
-    position: absolute;
 }
 
-.payClass,
-.receiveClass {
-    width: 65%;
+.Components_Body_Button:hover {
+    background-color: #1e254a;
+    transition: 0.1s ease;
+}
+
+.Currency_Input, .Currency_Output{
+    width: 100%;
+    height: 175px;
+    padding-left: 20px;
+}
+
+.Currency_Input_Holder, .Currency_Output_Holder{
     border: none; 
+    width: 65%;
     font-size: 72px; 
     background-color: #5261b3;
     color: white; 
-    top: 50%;
-    margin-left: 20px;
-    align-items: center;
+    position: absolute;
+    top: 55px;
 }
 
-/* Styling for placeholder text */
-.payClass::placeholder,
-.receiveClass::placeholder {
+.Currency_Input_Holder::placeholder,
+.Currency_Output_Holder::placeholder {
     color: #999; 
 }
 
-.payClass:focus,
-.receiveClass:focus {
+.Currency_Input_Holder:focus,
+.Currency_Output_Holder:focus {
     outline: none; 
 }
 
@@ -179,87 +156,71 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none; 
 }
 
-.youPay .title, .youReceive .title {
-    position: absolute;
+.Currency_Title{
     color: white; 
+    top: 15px;
+    position: absolute;
     font-size: 24px; 
-    top: -5px; 
-    left: 20px; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
 }
 
-.youPay .usd, .youReceive .usd {
-    position: absolute;
+.Currency_USD{
     color: white; 
-    font-size: 24px; 
-    top: 120px; 
-    left: 20px; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.swap svg {
-    transform: rotate(90deg); /* Rotate the SVG 90 degrees */
+    bottom: 15px;
     position: absolute;
-    top: 4px;
-    left: 4px;
-    height: 80%;
-    width: 80%;
+    font-size: 24px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
 }
 
-.swap svg path {
-    fill: white; /* Make all paths white */
-}
-
-.swap svg path:nth-of-type(2) {
-    fill: none; /* Make the second path (the square) transparent */
-}
-
-.youPay .token, .youReceive .token{
+.Choose_Token_1, .Choose_Token_2{
     width: 160px;
     height: 40px;
     background-color: #0e184f;
     border-radius: 60px;
-    top: 40%;
-    right: 10px;
-    position: absolute;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 20px);
 }
 
-.token:hover{
+.Choose_Token_1:hover, .Choose_Token_2:hover{
     background-color: #1e254a;
 }
 
-.selectToken{
+.Token_1_Title, .Token_2_Title{
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     position: absolute;
-    top: -12px;
-    margin-left: 10px;
+    top: 7px;
+    left: 8px;
+    white-space: nowrap;
 }
 
-.token svg{
+.Choose_Token_1 svg, .Choose_Token_2 svg{
     transform: rotate(-90deg); /* Rotate the SVG 90 degrees */
     position: absolute;
     top: 4px;
-    left: 70px;
+    left: 75px;
     height: 80%;
     width: 80%;
     fill: white;
 }
 
-.overlay {
+.Choose_Token_Overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3); 
-    z-index: 1005; 
+    z-index: 1000; 
     display: none; 
-  }
+}
 
-.overlayMenu{
+.Choose_Token_Overlay_Menu{
     height: 540px;
     width: 300px;
     border-radius: 30px;
@@ -273,27 +234,27 @@ input[type="number"]::-webkit-outer-spin-button {
     display: none;
 }
 
-.overlayTitle{
+.Overlay_Title{
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-    position: relative;
+    margin-top: 25px;
 }
 
-.coinName{
+.Token_Name{
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-.coinLetters{
+.Token_Letters{
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
     opacity: 70%;
 }
 
-.bitcoin, .ethereum, .coynbayse, .solana{
+.Bitcoin_Token, .Ethereum_Token, .Coynbayse_Token, .Solana_Token{
     cursor: pointer;
+    margin-top: 25px;
 }
-
