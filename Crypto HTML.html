@@ -38,13 +38,20 @@
                     </div>
 
                    <div class="Container_Wrapper">
-                        <main class="Swap_Wrapper">
+
+                        <div class="Trades_Wallet_Buttons_Wrapper">
+                                <button class="Trades_Button" id="Trades_Button_ID" style="background-color: #0e184f;">Trades</button>
+                                <span>/</span>
+                                <button class="Wallet_Button" id="Wallet_Button_ID">Wallet</button>
+                        </div>
+
+                        <main class="Swap_Wrapper" id="Swap_Wrapper_ID" style="display: block;">
 
                             <div class="Components_Header_Buttons">
-                                <button class="Components_Header_Swap" id="Swap_Button_ID">Swap</button>
-                                <button class="Components_Header_Buy" id="Buy_Button_ID">Buy</button>
-                                <button class="Components_Header_Sell" id="Sell_Button_ID">Sell</button>
-                                <button class="Components_Header_Send" id="Send_Button_ID">Send</button>
+                                <button class="Components_Header_Swap" id="Swap_Button_ID_Swap" style="background-color: #0e184f;">Swap</button>
+                                <button class="Components_Header_Buy" id="Buy_Button_ID_Swap">Buy</button>
+                                <button class="Components_Header_Sell" id="Sell_Button_ID_Swap">Sell</button>
+                                <button class="Components_Header_Send" id="Send_Button_ID_Swap">Send</button>
                             </div>
 
                             <div class="Components_Body_Pay">
@@ -90,6 +97,52 @@
                             <button class="Components_Body_Button">Connect to Burner Wallet</button>
 
                         </main>
+                        
+                        <main class="Buy_Wrapper" id="Buy_Wrapper_ID" style="display: none;">
+
+                            <div class="Components_Header_Buttons">
+                                <button class="Components_Header_Swap" id="Swap_Button_ID_Buy">Swap</button>
+                                <button class="Components_Header_Buy" id="Buy_Button_ID_Buy" style="background-color: #0e184f;">Buy</button>
+                                <button class="Components_Header_Sell" id="Sell_Button_ID_Buy">Sell</button>
+                                <button class="Components_Header_Send" id="Send_Button_ID_Buy">Send</button>
+                            </div>
+
+                            <div class="Components_Body_Pay"></div>
+
+                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+
+                        </main>
+
+                        <main class="Sell_Wrapper" id="Sell_Wrapper_ID" style="display: none;">
+
+                            <div class="Components_Header_Buttons">
+                                <button class="Components_Header_Swap" id="Swap_Button_ID_Sell">Swap</button>
+                                <button class="Components_Header_Buy" id="Buy_Button_ID_Sell">Buy</button>
+                                <button class="Components_Header_Sell" id="Sell_Button_ID_Sell" style="background-color: #0e184f;">Sell</button>
+                                <button class="Components_Header_Send" id="Send_Button_ID_Sell">Send</button>
+                            </div>
+
+                            <div class="Components_Body_Pay"></div>
+
+                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+
+                        </main>
+
+                        <main class="Send_Wrapper" id="Send_Wrapper_ID" style="display: none;">
+
+                            <div class="Components_Header_Buttons">
+                                <button class="Components_Header_Swap" id="Swap_Button_ID_Send">Swap</button>
+                                <button class="Components_Header_Buy" id="Buy_Button_ID_Send">Buy</button>
+                                <button class="Components_Header_Sell" id="Sell_Button_ID_Send">Sell</button>
+                                <button class="Components_Header_Send" id="Send_Button_ID_Send" style="background-color: #0e184f;">Send</button>
+                            </div>
+
+                            <div class="Components_Body_Pay"></div>
+
+                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+
+                        </main>
+
                    </div>
                 </div>
             </div>

@@ -15,8 +15,43 @@ html, body {
     background-color: #0e184f;
     padding: 20px;
     width: 100%; 
-    height: 20%;
+    height: 10%;
+    position: relative;
 }
+
+.Website_Header_Buttons{
+    padding: 20px;
+}
+
+.Trades_Wallet_Buttons_Wrapper{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.Trades_Wallet_Buttons_Wrapper span {
+    margin: 0 20px; 
+    color: white; 
+}
+
+.Wallet_Button, .Trades_Button{
+    width: 100px;
+    height: 50px;
+    background-color: #2A3B98;
+    border: none;
+    border-radius: 50px;
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Wallet_Button:hover, .Trades_Button:hover{
+    background-color: #5261b3;
+}
+
+
 
 .Website_Body_Wrapper{
     padding: 20px;
@@ -27,7 +62,7 @@ html, body {
     align-items: center;
 }
 
-.Swap_Wrapper{
+.Swap_Wrapper, .Buy_Wrapper, .Sell_Wrapper, .Send_Wrapper{
     position: relative; 
     top: 100px;
 }
@@ -44,20 +79,19 @@ html, body {
     height: 60px;
 }
 
-.Components_Header_Swap, .Components_Header_Buy, .Components_Header_Sell, .Components_Header_Send{
+.Components_Header_Swap, .Components_Header_Buy, .Components_Header_Sell, .Components_Header_Send {
     background-color: #2A3B98;
-    width: 130px; 
+    width: 130px;
     height: 100%;
     border-radius: 50px;
     color: #fff;
-    font-size: 24px; 
-    transition: color 0.3s ease; 
+    font-size: 24px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
     border: none;
 }
 
-.Components_Header_Swap:hover, .Components_Header_Buy:hover, .Components_Header_Sell:hover, .Components_Header_Send:hover{
+.Components_Header_Swap:hover, .Components_Header_Buy:hover, .Components_Header_Sell:hover, .Components_Header_Send:hover {
     background-color: #5261b3;
 }
 
@@ -181,8 +215,8 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 60px;
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: calc(50% - 20px);
+    right: 5%;
+    top: 45%;
 }
 
 .Choose_Token_1:hover, .Choose_Token_2:hover{
@@ -194,8 +228,8 @@ input[type="number"]::-webkit-outer-spin-button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     position: absolute;
-    top: 7px;
-    left: 8px;
+    top: 20%;
+    left: 7%;
     white-space: nowrap;
 }
 
@@ -210,7 +244,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .Choose_Token_Overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -227,11 +261,13 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: #5261b3;
     position: absolute;
     z-index: 1006;
-    left: 1300px;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     display: none;
+    position: absolute;
+    top: calc(50%-270px);
+    left: calc(50%-150px);
 }
 
 .Overlay_Title{

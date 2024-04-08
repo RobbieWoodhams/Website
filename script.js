@@ -3,11 +3,29 @@ const overlayMenu = document.getElementById('Overlay_Menu_ID');
 const overlayTitle = document.getElementById('Overlay_Title_ID');
 const token1 = document.getElementById("Token_1_ID");
 const token2 = document.getElementById("Token_2_ID");
-const buyBtn = document.getElementById("Buy_Button_ID");
-const sellBtn = document.getElementById("Sell_Button_ID");
-const swapBtn = document.getElementById("Swap_Button_ID");
-const sendBtn = document.getElementById("Send_Button_ID");
 const swapTokens = document.getElementById("Swap_Tokens_Button");
+const tradesButton = document.getElementById("Trades_Button_ID");
+const walletButton = document.getElementById("Wallet_Button_ID");
+
+const buyBtnSp = document.getElementById("Buy_Button_ID_Swap");
+const sellBtnSp = document.getElementById("Sell_Button_ID_Swap");
+const swapBtnSp = document.getElementById("Swap_Button_ID_Swap");
+const sendBtnSp = document.getElementById("Send_Button_ID_Swap");
+
+const buyBtnSl = document.getElementById("Buy_Button_ID_Sell");
+const sellBtnSl = document.getElementById("Sell_Button_ID_Sell");
+const swapBtnSl = document.getElementById("Swap_Button_ID_Sell");
+const sendBtnSl = document.getElementById("Send_Button_ID_Sell");
+
+const buyBtnBy = document.getElementById("Buy_Button_ID_Buy");
+const sellBtnBy = document.getElementById("Sell_Button_ID_Buy");
+const swapBtnBy = document.getElementById("Swap_Button_ID_Buy");
+const sendBtnBy = document.getElementById("Send_Button_ID_Buy");
+
+const buyBtnSd = document.getElementById("Buy_Button_ID_Send");
+const sellBtnSd = document.getElementById("Sell_Button_ID_Send");
+const swapBtnSd = document.getElementById("Swap_Button_ID_Send");
+const sendBtnSd = document.getElementById("Send_Button_ID_Send");
 
 const btc = document.getElementById("Bitcoin_Token_ID");
 const eth = document.getElementById("Ethereum_Token_ID");
@@ -21,26 +39,117 @@ let Active_Token_Output;
 const Currency_Input = document.getElementById("Currency_Input_ID");
 const Currency_Output = document.getElementById("Currency_Output_ID");
 
-buyBtn.addEventListener("click", function() {
-    removeBackground();
-    this.style.backgroundColor = "#0e184f";
+const Swap_Wrapper = document.getElementById("Swap_Wrapper_ID");
+const Buy_Wrapper = document.getElementById("Buy_Wrapper_ID");
+const Sell_Wrapper = document.getElementById("Sell_Wrapper_ID");
+const Send_Wrapper = document.getElementById("Send_Wrapper_ID");
 
+
+
+buyBtnSp.addEventListener("click", function() {
+    hideAllWrappers();
+    Buy_Wrapper.style.display = "block";
 });
 
-sellBtn.addEventListener("click", function() {
-    removeBackground();
+sellBtnSp.addEventListener("click", function() {
+    hideAllWrappers();
+    Sell_Wrapper.style.display = "block";
+});
+
+swapBtnSp.addEventListener("click", function() {
+    hideAllWrappers();
+    Swap_Wrapper.style.display = "block";
+});
+
+sendBtnSp.addEventListener("click", function() {
+    hideAllWrappers();
+    Send_Wrapper.style.display = "block";
+});
+
+
+buyBtnSl.addEventListener("click", function() {
+    hideAllWrappers();
+    Buy_Wrapper.style.display = "block";
+});
+
+sellBtnSl.addEventListener("click", function() {
+    hideAllWrappers();
+    Sell_Wrapper.style.display = "block";
+});
+
+swapBtnSl.addEventListener("click", function() {
+    hideAllWrappers();
+    Swap_Wrapper.style.display = "block";
+});
+
+sendBtnSl.addEventListener("click", function() {
+    hideAllWrappers();
+    Send_Wrapper.style.display = "block";
+});
+
+
+buyBtnBy.addEventListener("click", function() {
+    hideAllWrappers();
+    Buy_Wrapper.style.display = "block";
+});
+
+sellBtnBy.addEventListener("click", function() {
+    hideAllWrappers();
+    Sell_Wrapper.style.display = "block";
+});
+
+swapBtnBy.addEventListener("click", function() {
+    hideAllWrappers();
+    Swap_Wrapper.style.display = "block";
+});
+
+sendBtnBy.addEventListener("click", function() {
+    hideAllWrappers();
+    Send_Wrapper.style.display = "block";
+});
+
+
+buyBtnSd.addEventListener("click", function() {
+    hideAllWrappers();
+    Buy_Wrapper.style.display = "block";
+});
+
+sellBtnSd.addEventListener("click", function() {
+    hideAllWrappers();
+    Sell_Wrapper.style.display = "block";
+});
+
+swapBtnSd.addEventListener("click", function() {
+    hideAllWrappers();
+    Swap_Wrapper.style.display = "block";
+});
+
+sendBtnSd.addEventListener("click", function() {
+    hideAllWrappers();
+    Send_Wrapper.style.display = "block";
+});
+
+function hideAllWrappers() {
+    Buy_Wrapper.style.display = "none";
+    Sell_Wrapper.style.display = "none";
+    Swap_Wrapper.style.display = "none";
+    Send_Wrapper.style.display = "none";
+};
+
+tradesButton.addEventListener("click", function() {
+    removeBackgroundButtons();
     this.style.backgroundColor = "#0e184f";
 });
 
-swapBtn.addEventListener("click", function() {
-    removeBackground();
+walletButton.addEventListener("click", function() {
+    removeBackgroundButtons();
     this.style.backgroundColor = "#0e184f";
 });
 
-sendBtn.addEventListener("click", function() {
-    removeBackground();
-    this.style.backgroundColor = "#0e184f";
-});
+function removeBackgroundButtons(){
+    tradesButton.style.backgroundColor = "";
+    walletButton.style.backgroundColor = "";
+}
 
 function removeBackground(){
     buyBtn.style.backgroundColor = "";
@@ -53,7 +162,6 @@ function toggleOverlay() {
     overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
     overlayMenu.style.display = overlayMenu.style.display === 'block' ? 'none' : 'block';
 }
-
 
 token1.addEventListener("click", function(){
     overlayTitle.textContent = "Select token to pay"
@@ -253,8 +361,6 @@ document.getElementById('Currency_Input_ID').addEventListener('input', function(
         document.getElementById('Currency_Output_ID').value = receivedValue.toFixed(2);
         document.getElementById('Currency_USD_ID_2').textContent = "$" + convertedValue.toFixed(2);
     }
-
-
 });
 
 
