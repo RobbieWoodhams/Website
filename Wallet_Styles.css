@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    background-color: #2A3B98;
+}
+
+.Website_Header_Wrapper{
+    background-color: #0e184f;
+    padding: 20px;
+    width: 100%; 
+    height: 10%;
+    position: relative;
+}
+
+.Website_Header_Buttons{
+    padding: 20px;
+}
+
+.Trades_Wallet_Buttons_Wrapper{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.Trades_Wallet_Buttons_Wrapper span {
+    margin: 0 20px; 
+    color: white; 
+}
+
+.Wallet_Button, .Trades_Button{
+    width: 100px;
+    height: 50px;
+    background-color: #2A3B98;
+    border: none;
+    border-radius: 50px;
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Wallet_Button:hover, .Trades_Button:hover{
+    background-color: #5261b3;
+}
+
+.Website_Body_Wrapper{
+    padding: 20px;
+    width: 100%; 
+    height: 80%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.Swap_Wrapper, .Buy_Wrapper, .Sell_Wrapper, .Send_Wrapper{
+    position: relative; 
+    top: 100px;
+}
+
+.Container_Wrapper{
+    padding: 5px;
+    width: 100%; 
+    height: 800px;
+    margin: auto;
+}
+
+.Titles_Header{
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    background-color: #5261b3;
+    border-radius: 50px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    overflow: hidden;
+}
+
+.Titles_Header_Title{
+    color: white;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+    flex: 1;
+}
+
+

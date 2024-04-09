@@ -3,6 +3,8 @@ const overlayMenu = document.getElementById('Overlay_Menu_ID');
 const overlayTitle = document.getElementById('Overlay_Title_ID');
 const token1 = document.getElementById("Token_1_ID");
 const token2 = document.getElementById("Token_2_ID");
+const token1Sell = document.getElementById("Token_1_ID_Sell");
+const token2Buy = document.getElementById("Token_2_ID_Buy");
 const swapTokens = document.getElementById("Swap_Tokens_Button");
 const tradesButton = document.getElementById("Trades_Button_ID");
 const walletButton = document.getElementById("Wallet_Button_ID");
@@ -165,17 +167,25 @@ function toggleOverlay() {
 
 token1.addEventListener("click", function(){
     overlayTitle.textContent = "Select token to pay"
-
     Active_Token_Menu = token1;
-
     toggleOverlay();
 });
 
 token2.addEventListener("click", function(){
     overlayTitle.textContent = "Select token to receive"
-
     Active_Token_Menu = token2;
+    toggleOverlay();
+});
 
+token1Sell.addEventListener("click", function(){
+    overlayTitle.textContent = "Select token to pay"
+    Active_Token_Menu = token1;
+    toggleOverlay();
+});
+
+token2Buy.addEventListener("click", function(){
+    overlayTitle.textContent = "Select token to receive"
+    Active_Token_Menu = token2;
     toggleOverlay();
 });
 
@@ -363,5 +373,8 @@ document.getElementById('Currency_Input_ID').addEventListener('input', function(
     }
 });
 
+function Wallet_Page_Button(){
+    window.location.href = "Wallet_HTML.html";
+}
 
-
+//menus must be sorted

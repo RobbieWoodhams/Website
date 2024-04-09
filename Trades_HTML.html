@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="Trades_Styles.css">
+        <script src="Trades_Script.js" defer></script>
     </head>
     <body> 
         <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -42,7 +42,7 @@
                         <div class="Trades_Wallet_Buttons_Wrapper">
                                 <button class="Trades_Button" id="Trades_Button_ID" style="background-color: #0e184f;">Trades</button>
                                 <span>/</span>
-                                <button class="Wallet_Button" id="Wallet_Button_ID">Wallet</button>
+                                <button class="Wallet_Button" id="Wallet_Button_ID" onclick="Wallet_Page_Button()">Wallet</button>
                         </div>
 
                         <main class="Swap_Wrapper" id="Swap_Wrapper_ID" style="display: block;">
@@ -94,7 +94,7 @@
                                 </div>
                             </div>
 
-                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+                            <button class="Components_Body_Button">Confirm</button>
 
                         </main>
                         
@@ -107,9 +107,36 @@
                                 <button class="Components_Header_Send" id="Send_Button_ID_Buy">Send</button>
                             </div>
 
-                            <div class="Components_Body_Pay"></div>
+                            <div class="Components_Body_Pay">
+                                <div class="Currency_Input">
+                                    <h1 class="Currency_Title">You Pay</h1>
+                                    
+                                    <input type="number" id="Buy_Input_ID" name="buyInput" placeholder="0 GBP" class="Currency_Input_Holder">
+                                    
+                                    <h1 class="Currency_USD" id="Currency_USD_ID_Buy_1">$0.00</h1>
 
-                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+                                </div>
+                            </div>
+
+                            <div class="Components_Body_Receive">
+                                <div class="Currency_Output">
+                                    <h1 class="Currency_Title">You Receive</h1>
+                                    
+                                    <input type="number" id="Buy_Output_ID" name="buyOutput" placeholder="0" class="Currency_Output_Holder">
+                                    
+                                    <h1 class="Currency_USD" id="Currency_USD_ID_Buy_2">$0.00</h1>
+
+                                    <div class="Choose_Token_2" id="Token_2_ID_Buy">
+                                        
+                                        <p class="Token_2_Title">Select Token</p>
+                                        
+                                        <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="Components_Body_Button">Confirm</button>
 
                         </main>
 
@@ -122,9 +149,35 @@
                                 <button class="Components_Header_Send" id="Send_Button_ID_Sell">Send</button>
                             </div>
 
-                            <div class="Components_Body_Pay"></div>
+                            <div class="Components_Body_Pay">
+                                <div class="Currency_Input">
+                                    <h1 class="Currency_Title">You Pay</h1>
+                                    
+                                    <input type="number" id="Currency_Input_ID" name="currencyInput" placeholder="0" class="Currency_Input_Holder">
+                                    
+                                    <h1 class="Currency_USD" id="Currency_USD_ID_1">$0.00</h1>
 
-                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+                                    <div class="Choose_Token_1" id="Token_1_ID_Sell">
+
+                                        <p class="Token_1_Title">Select Token</p>
+                                        
+                                        <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Components_Body_Receive">
+                                <div class="Currency_Output">
+                                    <h1 class="Currency_Title">You Receive</h1>
+                                    
+                                    <input type="number" id="Currency_Output_ID" name="currencyOutput" placeholder="0 GBP" class="Currency_Output_Holder">
+                                    
+                                    <h1 class="Currency_USD" id="Currency_USD_ID_2">$0.00</h1>
+                                </div>
+                            </div>
+
+                            <button class="Components_Body_Button">Confirm</button>
 
                         </main>
 
@@ -139,10 +192,9 @@
 
                             <div class="Components_Body_Pay"></div>
 
-                            <button class="Components_Body_Button">Connect to Burner Wallet</button>
+                            <button class="Components_Body_Button">Confirm</button>
 
                         </main>
-
                    </div>
                 </div>
             </div>
